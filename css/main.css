@@ -30,8 +30,10 @@ a {
   height: 8rem;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
-
-.logo {
+.header a {
+  z-index: 3;
+}
+.header .logo {
   font-size: 2rem;
   font-weight: 700;
 }
@@ -91,9 +93,43 @@ a {
   display: none;
 }
 
+.burger-nav {
+  padding: 2rem;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.35, 1);
+}
+.burger-nav--active {
+  transform: translateX(0);
+}
+.burger-nav__container {
+  display: flex;
+  flex-direction: column;
+}
+.burger-nav a {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+.burger-nav a:hover {
+  font-weight: bold;
+}
+
 .home {
   padding: 2rem;
   margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 .home .introduction {
   display: flex;
@@ -195,7 +231,7 @@ a {
 .projects .container .text p {
   width: 100%;
   font-size: 1.4rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0 2rem 0;
 }
 .about-me .container .text .icon-used,
 .projects .container .text .icon-used {
