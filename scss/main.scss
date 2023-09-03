@@ -40,10 +40,8 @@ a {
 	.logo {
 		font-size: 2rem;
 		font-weight: 700;
-
 	}
 }
-
 
 .nav {
 	&-list {
@@ -246,8 +244,10 @@ a {
 		padding: 2rem;
 		box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 		border-radius: 1rem;
+
 		.text {
 			text-align: justify;
+			position: relative;
 
 			h3 {
 				text-align: center;
@@ -259,6 +259,10 @@ a {
 				width: 100%;
 				font-size: 1.4rem;
 				margin: 2rem 0 2rem 0;
+			}
+
+			.in-progress {
+				font-weight: 700;
 			}
 
 			.icon-used {
@@ -287,12 +291,30 @@ a {
 			}
 		}
 		.photo-projects {
+			position: relative;
 			margin-bottom: 2rem;
+			overflow: hidden;
 			// border-radius: 1rem;
 			.project-img {
 				width: 100%;
 				border-radius: 1rem;
 			}
+		}
+
+		.in-progress::after {
+			width: 14rem;
+			height: 2rem;
+			content: 'WORK IN PROGRESS';
+			position: absolute;
+			top: 3rem;
+			right: -3rem;
+			background-color: red;
+			color: $base-white-color;
+			transform: rotate(45deg);
+			text-align: center;
+			line-height: 2rem;
+			font-weight: 700;
+			font-size: 1rem;
 		}
 	}
 }
@@ -300,7 +322,6 @@ a {
 .contact {
 	padding: 2rem;
 	margin: 0 auto;
-	// margin-bottom: 5rem;
 
 	h2 {
 		text-align: center;
@@ -560,6 +581,15 @@ a {
 					left: 0;
 					height: 100%;
 				}
+			}
+			.in-progress::after {
+				width: 17rem;
+				height: 3rem;
+				top: 3.5rem;
+				right: -3.5rem;
+				text-align: center;
+				line-height: 3rem;
+				font-size: 1.2rem;
 			}
 		}
 	}

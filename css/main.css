@@ -220,6 +220,7 @@ a {
 .about-me .container .text,
 .projects .container .text {
   text-align: justify;
+  position: relative;
 }
 .about-me .container .text h3,
 .projects .container .text h3 {
@@ -232,6 +233,10 @@ a {
   width: 100%;
   font-size: 1.4rem;
   margin: 2rem 0 2rem 0;
+}
+.about-me .container .text .in-progress,
+.projects .container .text .in-progress {
+  font-weight: 700;
 }
 .about-me .container .text .icon-used,
 .projects .container .text .icon-used {
@@ -261,12 +266,30 @@ a {
 }
 .about-me .container .photo-projects,
 .projects .container .photo-projects {
+  position: relative;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 .about-me .container .photo-projects .project-img,
 .projects .container .photo-projects .project-img {
   width: 100%;
   border-radius: 1rem;
+}
+.about-me .container .in-progress::after,
+.projects .container .in-progress::after {
+  width: 14rem;
+  height: 2rem;
+  content: "WORK IN PROGRESS";
+  position: absolute;
+  top: 3rem;
+  right: -3rem;
+  background-color: red;
+  color: #fff;
+  transform: rotate(45deg);
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .contact {
@@ -507,6 +530,16 @@ a {
     position: relative;
     left: 0;
     height: 100%;
+  }
+  .about-me .container .in-progress::after,
+  .projects .container .in-progress::after {
+    width: 17rem;
+    height: 3rem;
+    top: 3.5rem;
+    right: -3.5rem;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.2rem;
   }
   .contact .title {
     margin-bottom: 5rem;
