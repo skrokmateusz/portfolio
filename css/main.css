@@ -30,10 +30,16 @@ a {
   height: 8rem;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
-.header a {
+.header .header-layout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-layout a {
   z-index: 3;
 }
-.header .logo {
+.header .header-layout .logo {
   font-size: 2rem;
   font-weight: 700;
 }
@@ -479,6 +485,10 @@ a {
   }
 }
 @media (min-width: 1200px) {
+  .header .header-layout {
+    margin: 0 auto;
+    width: 1200px;
+  }
   .home {
     width: 100rem;
     margin: 3rem auto 0 auto;
